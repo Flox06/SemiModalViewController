@@ -234,6 +234,11 @@ extension UIViewController {
     
     func dismissSemiModalViewWithCompletion(_ completion: (() -> Void)?) {
         let target = parentTarget()
+       
+        if target.viewWithTag(semiModalModalViewTag) == nil {
+            return
+        }
+       
         let modal = target.viewWithTag(semiModalModalViewTag)!
         let overlay = target.viewWithTag(semiModalOverlayTag)!
         
