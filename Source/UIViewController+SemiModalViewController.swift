@@ -228,7 +228,7 @@ extension UIViewController {
         addOrUpdateParentScreenshotInView(overlay!)
     }
     
-    func dismissSemiModalView() {
+    public func dismissSemiModalView() {
         dismissSemiModalViewWithCompletion(nil)
     }
     
